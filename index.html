@@ -3,153 +3,355 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Praxis für Ergotherapie und Handtherapie – Mareike Langner</title>
-  <meta name="description" content="Ergotherapie für Erwachsene und Kinder, Handtherapie, Hausbesuche, Reittherapie – Praxis Mareike Langner in Bergkamen-Heil." />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>Praxis für Ergotherapie & Handtherapie – Mareike Langner</title>
+  <meta name="description" content="Ergotherapie für Erwachsene und Kinder, Handtherapie, Hausbesuche, Reittherapie – Bergkamen-Heil." />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@300..700" rel="stylesheet" />
+
+  <!-- Optional: moderne Schrift -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand: #0f766e;   /* teal */
+      --brand-2:#0b5f59;
+      --bg:#0b1220;       /* dark hero */
+    }
+    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .material-symbols-rounded{ font-variation-settings: 'FILL' 0, 'wght' 450, 'GRAD' 0, 'opsz' 24; vertical-align: -4px; }
+    .navbar{ backdrop-filter: blur(10px); }
+    .btn-brand{ background: var(--brand); border-color: var(--brand); }
+    .btn-brand:hover{ background: var(--brand-2); border-color: var(--brand-2); }
+    .text-brand{ color: var(--brand); }
+    .hero{
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(15,118,110,.35), transparent 55%),
+                  radial-gradient(900px 500px at 80% 0%, rgba(34,197,94,.20), transparent 55%),
+                  linear-gradient(180deg, #0b1220, #0f172a);
+      color: white;
+    }
+    .hero-card{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+    .elev{
+      box-shadow: 0 14px 35px rgba(2,6,23,.12);
+      border: 1px solid rgba(2,6,23,.06);
+    }
+    .pill{
+      display:inline-flex; gap:.45rem; align-items:center;
+      padding:.35rem .7rem;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      font-size: .9rem;
+    }
+    .section{ padding: 4.5rem 0; }
+    .section-alt{ background: #f7fafc; }
+    .hero-img{
+      border-radius: 1.25rem;
+      overflow:hidden;
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .muted{ color: rgba(255,255,255,.75); }
+    .small-muted{ color: rgba(15,23,42,.65); }
+  </style>
 </head>
 
 <body>
-  <a class="skip" href="#content">Zum Inhalt springen</a>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white bg-opacity-75 border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <span class="material-symbols-rounded text-brand">spa</span>
+        Ergotherapie Langner
+      </a>
 
-  <header class="top">
-    <div class="wrap top-inner">
-      <div class="brand">
-        <h1>Praxis für Ergotherapie und Handtherapie<br><span>Mareike Langner</span></h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#leistungen">Leistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#praxis">Praxis</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-brand text-white rounded-pill px-3" href="#kontakt">
+              <span class="material-symbols-rounded">event_available</span>
+              Termin anfragen
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <div class="tags" aria-label="Leistungsstichworte">
-        <span>Ergotherapie</span>
-        <span>Handtherapie</span>
-        <span>Hausbesuche</span>
-        <span>Reittherapie</span>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container py-5 py-lg-6">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="pill"><span class="material-symbols-rounded">location_on</span> Bergkamen-Heil</span>
+            <span class="pill"><span class="material-symbols-rounded">verified</span> Kassenzulassung (auch BG)</span>
+            <span class="pill"><span class="material-symbols-rounded">home_health</span> Hausbesuche</span>
+          </div>
+
+          <h1 class="display-5 fw-bold lh-sm mb-3">
+            Praxis für Ergotherapie & Handtherapie<br class="d-none d-md-block" />
+            <span class="text-white-50">Mareike Langner</span>
+          </h1>
+
+          <p class="lead muted mb-4">
+            Ergotherapie für Erwachsene und Kinder – alltagsnah, individuell, mit klaren Zielen.
+            Handtherapie und Reittherapie als ergänzende Schwerpunkte.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-brand text-white rounded-pill px-4" href="tel:+4923069404496">
+              <span class="material-symbols-rounded">call</span>
+              02306 9404496
+            </a>
+            <a class="btn btn-outline-light rounded-pill px-4" href="mailto:info@ergotherapie-langner.de">
+              <span class="material-symbols-rounded">mail</span>
+              E-Mail
+            </a>
+          </div>
+
+          <p class="mt-3 mb-0 muted">
+            Alternativ: <a class="text-white" href="tel:+491732651491">0173 2651491</a> (WhatsApp möglich).
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-img">
+            <!-- Ersetze das Bild durch dein Praxisfoto -->
+            <img src="assets/hero.jpg" class="img-fluid" alt="Außenansicht der Praxis" />
+          </div>
+
+          <div class="p-4 mt-3 rounded-4 hero-card">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="material-symbols-rounded">info</span>
+              <strong>So läuft’s ab</strong>
+            </div>
+            <ol class="mb-0 muted">
+              <li>Kontakt aufnehmen (Telefon oder E-Mail)</li>
+              <li>Termin & Anliegen klären</li>
+              <li>Therapieplan & Ziele festlegen</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <main id="content">
-    <section class="hero" aria-label="Praxisfoto">
-      <div class="wrap">
-        <figure class="hero-figure">
-          <img src="assets/hero.jpg" alt="Außenansicht der Praxis" />
-        </figure>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="wrap grid">
-        <!-- MAIN -->
-        <article class="main">
-          <h2>Herzlich Willkommen auf unserer Homepage!</h2>
-          <p class="meta">Stand: <time datetime="2021-10-20">20. Oktober 2021</time></p>
-
-          <p>
-            Unsere Leistungen sind:
-          </p>
-
-          <p>
-            Ergotherapie für Erwachsene und Kinder, Hausbesuche, Kassenzulassung auch für BG Patienten und Reittherapie.
-            Für Terminvereinbarungen rufen Sie bitte an unter
-            <a href="tel:+4923069404496">02306 9404496</a>
-            oder
-            <a href="tel:+491732651491">0173 2651491</a>
-            (auch per WhatsApp erreichbar).
-            Nur der Anrufbeantworter? Hinterlassen Sie eine Nachricht, wir rufen zurück!
-          </p>
-
-          <div class="cta">
-            <a class="btn" href="tel:+4923069404496">Jetzt anrufen</a>
-            <a class="btn ghost" href="mailto:info@ergotherapie-langner.de">E-Mail schreiben</a>
-          </div>
-        </article>
-
-        <!-- SIDEBAR -->
-        <aside class="side" aria-label="Infobereich">
-          <div class="card">
-            <h3>Ergotherapie in der Praxis oder als Hausbesuch</h3>
-            <p>
-              Behandlung von BG-Patienten. Handtherapie nach Operationen, Karpaltunnel, M. Dupuytren,
-              rheumatische Erkrankungen der Hand. Behandlung neurologischer Krankheitsbilder
-              (z. B. nach Schlaganfall, M. Parkinson, MS). Hilfsmittelberatung, motorisches
-              Lernen, Konzentrations- und Sozialkompetenztraining für Kinder.
-            </p>
-          </div>
-
-          <div class="card subtle">
-            <h3>Facebook</h3>
-            <p class="muted">Optional: Link ergänzen, wenn vorhanden.</p>
-            <a class="link" href="#" aria-disabled="true">facebook.com/…</a>
-          </div>
-
-          <div class="card subtle">
-            <h3>Suchen</h3>
-            <form class="search" onsubmit="return false">
-              <input id="q" type="search" placeholder="Thema eingeben…" />
-              <button type="button" class="btn small" id="searchBtn">Suche</button>
-            </form>
-            <p class="muted tiny">Für GitHub Pages ohne Backend ist das nur ein Platzhalter.</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="contact" aria-label="Kontakt">
-      <div class="wrap contact-grid">
-        <div>
-          <h2>Kontakt</h2>
-          <p class="muted">Praxis für Ergotherapie und Handtherapie Mareike Langner</p>
-
-          <div class="contact-block">
-            <div>
-              <div class="label">Adresse</div>
-              <div>
-                Südliche Lippestraße 5a<br>
-                59192 Bergkamen-Heil
-              </div>
-            </div>
-
-            <div>
-              <div class="label">Telefon</div>
-              <div>
-                <a href="tel:+4923069404496">02306 9404496</a><br>
-                <a href="tel:+491732651491">0173 2651491</a>
-              </div>
-            </div>
-
-            <div>
-              <div class="label">Mail</div>
-              <div>
-                <a href="mailto:info@ergotherapie-langner.de">info@ergotherapie-langner.de</a>
-              </div>
-            </div>
-          </div>
-
-          <p class="muted tiny">
-            Hinweis: Impressum/Datenschutz können wir als eigene Seiten ergänzen, wenn du willst.
-          </p>
-        </div>
-
-        <div class="map card">
-          <h3>Anfahrt</h3>
-          <p class="muted">Klick öffnet Google Maps.</p>
-          <a class="btn small" target="_blank" rel="noreferrer"
-             href="https://www.google.com/maps/search/?api=1&query=S%C3%BCdliche%20Lippestra%C3%9Fe%205a%2C%2059192%20Bergkamen">
-            In Google Maps öffnen
-          </a>
+  <!-- Leistungen -->
+  <section id="leistungen" class="section">
+    <div class="container">
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-7">
+          <h2 class="fw-bold mb-2">Leistungen</h2>
+          <p class="text-secondary mb-0">Kurz & klar wie auf deiner WP-Seite, aber moderner und besser scannbar.</p>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="wrap footer-inner">
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">accessibility_new</span>
+                <strong>Ergotherapie</strong>
+              </div>
+              <p class="mb-0 text-secondary">Für Erwachsene und Kinder – Förderung von Selbstständigkeit & Alltagshandeln.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">front_hand</span>
+                <strong>Handtherapie</strong>
+              </div>
+              <p class="mb-0 text-secondary">Nach Operationen/Verletzungen oder bei Erkrankungen der Hand – gezielt & funktionell.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">home_health</span>
+                <strong>Hausbesuche</strong>
+              </div>
+              <p class="mb-0 text-secondary">Therapie in vertrauter Umgebung, wenn sinnvoll oder verordnet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">workspace_premium</span>
+                <strong>BG-Patient:innen</strong>
+              </div>
+              <p class="mb-0 text-secondary">Kassenzulassung auch für BG-Behandlungen (Arbeits-/Wegeunfälle).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">pets</span>
+                <strong>Reittherapie</strong>
+              </div>
+              <p class="mb-0 text-secondary">Pferdgestützte Angebote als ergänzender therapeutischer Ansatz.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">neurology</span>
+                <strong>Neurologie</strong>
+              </div>
+              <p class="mb-0 text-secondary">z. B. nach Schlaganfall, Parkinson, MS – Training, Hilfsmittel, Alltagstransfer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Praxis -->
+  <section id="praxis" class="section section-alt">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Die Praxis</h2>
+          <p class="text-secondary">
+            Hier kommt später ein kurzer, vertrauensbildender Text (Ansatz, Atmosphäre, Ablauf).
+            Für den Prototyp lassen wir’s bewusst knapp.
+          </p>
+
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex gap-2">
+              <span class="material-symbols-rounded text-brand">check_circle</span>
+              <div><strong>Individuelle Zielvereinbarung</strong><div class="small-muted">klare Ziele, messbarer Fortschritt</div></div>
+            </div>
+            <div class="d-flex gap-2">
+              <span class="material-symbols-rounded text-brand">check_circle</span>
+              <div><strong>Alltagsorientiert</strong><div class="small-muted">Übungen, die wirklich helfen</div></div>
+            </div>
+            <div class="d-flex gap-2">
+              <span class="material-symbols-rounded text-brand">check_circle</span>
+              <div><strong>Transparente Planung</strong><div class="small-muted">wir erklären, was wir warum tun</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card elev rounded-4">
+            <div class="card-body p-4">
+              <h3 class="h5 fw-bold mb-2">Standort</h3>
+              <p class="mb-3 text-secondary">Südliche Lippestraße 5a, 59192 Bergkamen-Heil</p>
+              <a class="btn btn-brand text-white rounded-pill px-4"
+                 target="_blank" rel="noreferrer"
+                 href="https://www.google.com/maps/search/?api=1&query=S%C3%BCdliche%20Lippestra%C3%9Fe%205a%2C%2059192%20Bergkamen">
+                <span class="material-symbols-rounded">map</span>
+                In Maps öffnen
+              </a>
+              <p class="text-secondary mt-3 mb-0 small">
+                Öffnungszeiten: später ergänzen (oder “nach Vereinbarung”).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="section">
+    <div class="container">
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-7">
+          <h2 class="fw-bold mb-2">Kontakt</h2>
+          <p class="text-secondary mb-0">Am schnellsten per Telefon – sonst gern per E-Mail.</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev rounded-4 h-100">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">call</span><strong>Telefon</strong>
+              </div>
+              <p class="mb-2"><a class="text-decoration-none" href="tel:+4923069404496">02306 9404496</a></p>
+              <p class="mb-0 text-secondary small">Alternativ: <a href="tel:+491732651491">0173 2651491</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card elev rounded-4 h-100">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">mail</span><strong>E-Mail</strong>
+              </div>
+              <p class="mb-0"><a class="text-decoration-none" href="mailto:info@ergotherapie-langner.de">info@ergotherapie-langner.de</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+          <div class="card elev rounded-4 h-100">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-brand">
+                <span class="material-symbols-rounded">location_on</span><strong>Adresse</strong>
+              </div>
+              <p class="mb-3 text-secondary">Südliche Lippestraße 5a<br>59192 Bergkamen-Heil</p>
+              <a class="btn btn-outline-secondary rounded-pill px-4" target="_blank" rel="noreferrer"
+                 href="https://www.google.com/maps/search/?api=1&query=S%C3%BCdliche%20Lippestra%C3%9Fe%205a%2C%2059192%20Bergkamen">
+                <span class="material-symbols-rounded">directions</span>
+                Route planen
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between flex-wrap gap-2 mt-4 small text-secondary">
         <div>© <span id="year"></span> Ergotherapie Langner</div>
-        <div class="footer-links">
-          <a href="#" aria-disabled="true">Impressum</a>
-          <a href="#" aria-disabled="true">Datenschutz</a>
+        <div class="d-flex gap-3">
+          <a class="text-secondary" href="impressum.html">Impressum</a>
+          <a class="text-secondary" href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
-    </footer>
-  </main>
+    </div>
+  </section>
 
-  <script src="assets/main.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
